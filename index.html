@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Linda AlQaisi - Portfolio</title>
+      <style>
+         /* Global Styles */
+         body {
+         font-family: 'Arial', sans-serif;
+         line-height: 1.6;
+         color: #333;
+         margin: 0;
+         padding: 0;
+         }
+         .logo {
+         display: flex;
+         align-items: center;
+         }
+         .logo svg {
+         margin-right: 10px;
+         }
+         .container {
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 0 20px;
+         }
+         /* Header Styles */
+         header {
+         background-color: #f4f4f4;
+         padding: 20px 0;
+         }
+         nav {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         }
+         .logo {
+         font-size: 24px;
+         font-weight: bold;
+         }
+         .logo svg {
+         width: 50px;
+         height: 50px;
+         }
+         nav ul {
+         list-style-type: none;
+         display: flex;
+         }
+         nav ul li {
+         margin-left: 20px;
+         }
+         nav ul li a {
+         text-decoration: none;
+         color: #333;
+         display: flex;
+         align-items: center;
+         }
+         nav ul li a svg {
+         margin-right: 5px;
+         }
+         /* Page Styles */
+         .page {
+         display: none;
+         padding: 40px 0;
+         }
+         .page.active {
+         display: block;
+         }
+         h1 {
+         font-size: 2.5em;
+         margin-bottom: 20px;
+         }
+         /* Home Page */
+         #home {
+         text-align: center;
+         }
+         /* About Page */
+         .profile-image {
+         max-width: 200px;
+         border-radius: 50%;
+         margin-bottom: 20px;
+         }
+         /* Projects Page */
+         .project {
+         margin-bottom: 40px;
+         }
+         .project img {
+         max-width: 100%;
+         height: auto;
+         margin-bottom: 10px;
+         }
+         /* Services Page */
+         .service {
+         margin-bottom: 30px;
+         display: flex;
+         align-items: center;
+         }
+         .service svg {
+         width: 50px;
+         height: 50px;
+         margin-right: 20px;
+         }
+         /* Contact Page */
+         form {
+         max-width: 500px;
+         }
+         form input, form textarea {
+         width: 100%;
+         padding: 10px;
+         margin-bottom: 10px;
+         }
+         form button {
+         background-color: #333;
+         color: #fff;
+         padding: 10px 20px;
+         border: none;
+         cursor: pointer;
+         }
+         /* Emoji Styles */
+         .emoji {
+         font-size: 1.5em;
+         margin-right: 10px;
+         }
+         /* Responsive Design */
+         @media (max-width: 768px) {
+         nav {
+         flex-direction: column;
+         }
+         nav ul {
+         margin-top: 20px;
+         }
+         nav ul li {
+         margin-left: 0;
+         margin-right: 20px;
+         }
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <div class="container">
+            <nav>
+               <div class="logo">
+                  <svg viewBox="0 0 100 100" width="50" height="50">
+                     <rect width="100" height="100" fill="#007bfc" />
+                     <text x="50" y="65" text-anchor="middle" fill="white" font-size="45" font-family="Arial, sans-serif" font-weight="bold">LA</text>
+                  </svg>
+               </div>
+               <ul>
+                  <li>
+                     <a href="#home">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                           <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        Home
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#about">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                           <circle cx="12" cy="12" r="10"></circle>
+                           <line x1="12" y1="16" x2="12" y2="12"></line>
+                           <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        About
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#projects">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                           <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                           <polyline points="2 17 12 22 22 17"></polyline>
+                           <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                        Projects
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#services">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                           <circle cx="12" cy="12" r="3"></circle>
+                           <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                        </svg>
+                        Services
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#contact">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                           <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Contact
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#resources">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                           <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                           <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        Resources
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+      <main class="container">
+         <!-- Home Page -->
+         <section id="home" class="page active">
+            <h1><span class="emoji">👋</span>Welcome to Linda AlQaisi's Portfolio</h1>
+            <p><span class="emoji">🎨</span>Multimedia Designer | <span class="emoji">🎉</span>Event Organizer | <span class="emoji">💼</span>Manager</p>
+            <p><strong>Mission Statement:</strong> To create captivating multimedia experiences and seamlessly organize events that leave lasting impressions.</p>
+            <button id="learn-more" style="
+               background-color: #007bfc;
+               border: none;
+               color: white;
+               padding: 15px 32px;
+               text-align: center;
+               text-decoration: none;
+               display: inline-block;
+               font-size: 16px;
+               margin: 4px 2px;
+               cursor: pointer;
+               transition: all 0.3s ease;
+               border-radius: 50px;
+               box-shadow: 0 9px #999;
+               outline: none;
+               ">Learn More About Me</button>
+         </section>
+         <!-- About Page -->
+         <section id="about" class="page">
+            <h1><span class="emoji">🙋‍♀️</span>About Me</h1>
+            <img src="https://placehold.co/200x200" alt="Linda AlQaisi" class="profile-image">
+            <p>Hi, I'm Linda AlQaisi, a passionate multimedia designer with a background in the restaurant industry and a love for event organization. With my diverse skill set, I bring creativity and efficiency to every project I undertake.</p>
+            <p>My experience spans from crafting visually stunning designs to managing complex events and streamlining restaurant operations. I thrive on challenges and am always eager to learn and grow in my professional journey.</p>
+            <a href="#" download><span class="emoji">📄</span>Download My Resume (PDF)</a>
+         </section>
+         <!-- Projects Page -->
+         <section id="projects" class="page">
+            <h1><span class="emoji">🚀</span>My Projects</h1>
+            <div class="project">
+               <img src="https://placehold.co/600x400" alt="Restaurant Branding Project">
+               <h2><span class="emoji">🍽️</span>Restaurant Branding Overhaul</h2>
+               <p>Led a comprehensive rebranding project for a local restaurant chain, including logo design, menu layout, and interior decor concepts. The new branding increased customer engagement by 30%.</p>
+            </div>
+            <div class="project">
+               <img src="https://placehold.co/600x400" alt="Charity Gala Event">
+               <h2><span class="emoji">🎭</span>Annual Charity Gala</h2>
+               <p>Organized and managed a high-profile charity gala for 500 guests, coordinating vendors, entertainment, and logistics. The event raised over $100,000 for local charities.</p>
+            </div>
+            <div class="project">
+               <img src="https://placehold.co/600x400" alt="Multimedia Marketing Campaign">
+               <h2><span class="emoji">📱</span>Multimedia Marketing Campaign</h2>
+               <p>Developed and executed a multimedia marketing campaign for a tech startup, including video production, social media content, and interactive web elements. The campaign resulted in a 50% increase in brand awareness.</p>
+            </div>
+         </section>
+         <!-- Services Page -->
+         <section id="services" class="page">
+            <h1><span class="emoji">🛠️</span>My Services</h1>
+            <div class="service">
+               <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                  <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                  <path d="M2 2l7.586 7.586"></path>
+                  <circle cx="11" cy="11" r="2"></circle>
+               </svg>
+               <div>
+                  <h2>Multimedia Design</h2>
+                  <p>Creating visually stunning and engaging content across various digital platforms.</p>
+               </div>
+            </div>
+            <div class="service">
+               <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+               </svg>
+               <div>
+                  <h2>Event Planning and Management</h2>
+                  <p>Seamlessly organizing and executing events of all sizes, from intimate gatherings to large-scale galas.</p>
+               </div>
+            </div>
+            <div class="service">
+               <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+               </svg>
+               <div>
+                  <h2>Restaurant Consulting</h2>
+                  <p>Providing expert advice on restaurant operations, menu design, and customer experience optimization.</p>
+               </div>
+            </div>
+         </section>
+         <!-- Contact Page -->
+         <section id="contact" class="page">
+            <h1><span class="emoji">📬</span>Contact Me</h1>
+            <div class="contact-info">
+               <p><span class="emoji">📧</span>Email: linda.alqaisi@example.com</p>
+               <p><span class="emoji">📞</span>Phone: (123) 456-7890</p>
+               <p><span class="emoji">📍</span>Location: Toronto, ON, Canada</p>
+            </div>
+            <form id="contact-form">
+               <input type="text" name="firstName" placeholder="First Name" required>
+               <input type="text" name="lastName" placeholder="Last Name" required>
+               <input type="tel" name="phone" placeholder="Contact Number">
+               <input type="email" name="email" placeholder="Email Address" required>
+               <textarea name="message" placeholder="Your Message" required></textarea>
+               <button type="submit"><span class="emoji">📤</span> Send Message</button>
+            </form>
+         </section>
+         <!-- Resources Page -->
+         <section id="resources" class="page">
+            <h1><span class="emoji">📚</span>Resources</h1>
+            <h2>Emojis Used</h2>
+            <table>
+               <tr>
+                  <th>Emoji</th>
+                  <th>Description</th>
+                  <th>Usage</th>
+               </tr>
+               <tr>
+                  <td>👋</td>
+                  <td>Waving Hand</td>
+                  <td>Welcome message</td>
+               </tr>
+               <tr>
+                  <td>🎨</td>
+                  <td>Artist Palette</td>
+                  <td>Multimedia Designer</td>
+               </tr>
+               <tr>
+                  <td>🎉</td>
+                  <td>Party Popper</td>
+                  <td>Event Organizer</td>
+               </tr>
+               <tr>
+                  <td>💼</td>
+                  <td>Briefcase</td>
+                  <td>Manager</td>
+               </tr>
+               <tr>
+                  <td>🙋‍♀️</td>
+                  <td>Woman Raising Hand</td>
+                  <td>About Me section</td>
+               </tr>
+               <tr>
+                  <td>📄</td>
+                  <td>Page Facing Up</td>
+                  <td>Resume download</td>
+               </tr>
+               <tr>
+                  <td>🚀</td>
+                  <td>Rocket</td>
+                  <td>Projects section</td>
+               </tr>
+               <tr>
+                  <td>🛠️</td>
+                  <td>Hammer and Wrench</td>
+                  <td>Services section</td>
+               </tr>
+               <tr>
+                  <td>📬</td>
+                  <td>Open Mailbox with Raised Flag</td>
+                  <td>Contact section</td>
+               </tr>
+            </table>
+            <h2>SVGs Used</h2>
+            <p>This portfolio uses SVG icons from the Feather Icons set. Here are some examples:</p>
+            <ul>
+               <li>
+                  Home Icon: 
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                     <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                     <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+               </li>
+               <li>
+                  About Icon: 
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                     <circle cx="12" cy="12" r="10"></circle>
+                     <line x1="12" y1="16" x2="12" y2="12"></line>
+                     <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+               </li>
+               <li>
+                  Projects Icon: 
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                     <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                     <polyline points="2 17 12 22 22 17"></polyline>
+                     <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+               </li>
+            </ul>
+            <p>SVGs are used inline in the HTML to allow for easy styling and manipulation.</p>
+            <h2>Useful Links</h2>
+            <ul>
+               <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a> - Web development learning resources</li>
+               <li><a href="https://greenbackend.com/" target="_blank">Green Backend</a> - Website hosting services</li>
+               <li><a href="https://placehold.co/" target="_blank">Placehold.co</a> - Placeholder image service used in this portfolio</li>
+               <li><a href="https://feathericons.com/" target="_blank">Feather Icons</a> - Source of SVG icons used in this portfolio</li>
+               <li><a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a> - Free source code editor and Notepad replacement</li>
+               <li><a href="https://www.freeformatter.com/html-formatter.html" target="_blank">HTML Formatter</a> - Online tool for formatting HTML code</li>
+               <li><a href="https://www.cleancss.com/css-beautify/" target="_blank">CSS Beautifier</a> - Online tool for formatting CSS code</li>
+            </ul>
+            <h2>Development Tools</h2>
+            <p>Here are some tools I find helpful in my web development process:</p>
+            <ul>
+               <li><strong>Notepad++:</strong> A powerful, free source code editor that supports multiple programming languages. It's lightweight, fast, and offers features like syntax highlighting and code folding.</li>
+               <li>
+                  <strong>Online Code Formatters:</strong> These tools can be incredibly useful for quickly formatting and tidying up code:
+                  <ul>
+                     <li><a href="https://www.freeformatter.com/html-formatter.html" target="_blank">HTML Formatter</a> - For cleaning up and properly indenting HTML code. This tool can make your HTML more readable and easier to maintain.</li>
+                     <li><a href="https://www.cleancss.com/css-beautify/" target="_blank">CSS Beautifier</a> - For formatting and organizing CSS code. It helps in maintaining a consistent style and makes your stylesheets more manageable.</li>
+                  </ul>
+               </li>
+            </ul>
+         </section>
+      </main>
+      <footer>
+         <div class="container">
+            <p>&copy; 2024 Linda AlQaisi. All rights reserved.</p>
+            <div class="social-icons">
+               <a href="#" aria-label="LinkedIn">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                     <rect x="2" y="9" width="4" height="12"></rect>
+                     <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+               </a>
+               <a href="#" aria-label="Twitter">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                     <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                  </svg>
+               </a>
+               <a href="#" aria-label="Instagram">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+               </a>
+            </div>
+         </div>
+      </footer>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+         $(document).ready(function() {
+             // Navigation
+             $('nav a').on('click', function(e) {
+                 e.preventDefault();
+                 var target = $(this).attr('href');
+                 $('.page').removeClass('active');
+                 $(target).addClass('active');
+                 $('html, body').animate({
+                     scrollTop: $(target).offset().top - $('header').outerHeight()
+                 }, 1000);
+             });
+         
+             // Learn More button
+             $('#learn-more').on('click', function() {
+                 $('.page').removeClass('active');
+                 $('#about').addClass('active');
+                 $('html, body').animate({
+                     scrollTop: $('#about').offset().top - $('header').outerHeight()
+                 }, 1000);
+             });
+         
+             // Contact form submission
+             $('#contact-form').on('submit', function(e) {
+                 e.preventDefault();
+                 // In a real scenario, you would send the form data to a server here
+                 alert('Thank you for your message! I will get back to you soon.');
+                 this.reset();
+                 $('.page').removeClass('active');
+                 $('#home').addClass('active');
+                 $('html, body').animate({
+                     scrollTop: 0
+                 }, 1000);
+             });
+         
+             // Smooth scroll for in-page links
+             $('a[href^="#"]').on('click', function(e) {
+                 e.preventDefault();
+                 var target = $(this).attr('href');
+                 $('html, body').animate({
+                     scrollTop: $(target).offset().top - $('header').outerHeight()
+                 }, 1000);
+             });
+         
+             // Add animation to project images on hover
+             $('.project img').hover(
+                 function() {
+                     $(this).css('transform', 'scale(1.05)');
+                 },
+                 function() {
+                     $(this).css('transform', 'scale(1)');
+                 }
+             );
+         });
+      </script>
+   </body>
+</html>
